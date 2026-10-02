@@ -523,6 +523,12 @@ impl LlamaModelParams {
         self
     }
 
+    #[must_use]
+pub fn with_use_extra_bufts(mut self, enabled: bool) -> Self {
+    self.params.use_extra_bufts = enabled;
+    self
+}
+
     /// sets the main GPU
     ///
     /// To enable this option, you must set `split_mode` to `LlamaSplitMode::None` to enable single GPU mode.
